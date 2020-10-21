@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Drag & Drop</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="custom.css">
+
+</head>
+<body>
+<h3>Import WebApp</h3>
+    <div class="draggable-main">
+      
+      <div class="box">
+	
+	<h1>Cities</h1>
+        <ul class="connected-sortable draggable-left">
+          <li class="ui-sortable-handle">Item 1</li>
+          <li class="ui-sortable-handle">Item 2</li>
+          <li class="ui-sortable-handle">Item 3</li>
+          <li class="ui-sortable-handle">Item 4</li>
+          <li class="ui-sortable-handle">Item 5</li>
+          <li class="ui-sortable-handle">Item 6</li>
+          <li class="ui-sortable-handle">Item 7</li>
+          <li class="ui-sortable-handle">Item 1</li>
+          <li class="ui-sortable-handle">Item 2</li>
+          <li class="ui-sortable-handle">Item 3</li>
+          <li class="ui-sortable-handle">Item 4</li>
+          <li class="ui-sortable-handle">Item 5</li>
+          <li class="ui-sortable-handle">Item 6</li>
+          <li class="ui-sortable-handle">Item 7</li>
+        </ul>
+	</div>
+	
+	</div>
+	
+	<div class="other">
+	
+	<h2>Monday</h2>
+        <ul class="connected-sortable draggable-abct">
+          <li class="ui-sortable-handle">Item 8</li>
+          <li class="ui-sortable-handle">Item 9</li>
+          <li class="ui-sortable-handle">Item 10</li>
+          <li class="ui-sortable-handle">Item 11</li>
+          <li class="ui-sortable-handle">Item 12</li>
+          <li class="ui-sortable-handle">Item 13</li>
+          <li class="ui-sortable-handle">Item 14</li>
+	</ul>
+	
+	</div>
+	<div class="other">
+	
+	<h2>Tuesday</h2>
+	<ul class="connected-sortable draggable-abct">
+          <li class="ui-sortable-handle">Item 15</li>
+          <li class="ui-sortable-handle">Item 16</li>
+          <li class="ui-sortable-handle">Item 17</li>
+          <li class="ui-sortable-handle">Item 18</li>
+          <li class="ui-sortable-handle">Item 19</li>
+          <li class="ui-sortable-handle">Item 20</li>
+          <li class="ui-sortable-handle">Item 21</li>
+        </ul>
+	</div>
+
+	<div class="other">
+	
+	<h2>Wednesday</h2>
+	<ul class="connected-sortable draggable-abct">
+	
+          <li class="ui-sortable-handle">Item 15</li>
+          <li class="ui-sortable-handle">Item 16</li>
+          <li class="ui-sortable-handle">Item 17</li>
+          <li class="ui-sortable-handle">Item 18</li>
+          <li class="ui-sortable-handle">Item 19</li>
+          <li class="ui-sortable-handle">Item 20</li>
+          <li class="ui-sortable-handle">Item 21</li>
+	
+        </ul>
+	
+	</div>
+	<div class="other">
+	
+	<h2>Thursday</h2>
+	
+	<ul class="connected-sortable draggable-abct">
+          <li class="ui-sortable-handle">Item 15</li>
+          <li class="ui-sortable-handle">Item 16</li>
+          <li class="ui-sortable-handle">Item 17</li>
+          <li class="ui-sortable-handle">Item 18</li>
+          <li class="ui-sortable-handle">Item 19</li>
+          <li class="ui-sortable-handle">Item 20</li>
+          <li class="ui-sortable-handle">Item 21</li>
+        </ul>
+
+	</div>	
+
+	<div class="other">
+	<h2>Friday</h2>
+	<ul class="connected-sortable draggable-abct">
+          <li class="ui-sortable-handle">Item 15</li>
+          <li class="ui-sortable-handle">Item 16</li>
+          <li class="ui-sortable-handle">Item 17</li>
+          <li class="ui-sortable-handle">Item 18</li>
+          <li class="ui-sortable-handle">Item 19</li>
+          <li class="ui-sortable-handle">Item 20</li>
+          <li class="ui-sortable-handle">Item 21</li>
+        </ul>
+	
+	</div>
+	<div class="other">
+	
+	<h2>Saturday</h2>
+	<ul class="connected-sortable draggable-abct">
+          <li class="ui-sortable-handle">Item 15</li>
+          <li class="ui-sortable-handle">Item 16</li>
+          <li class="ui-sortable-handle">Item 17</li>
+          <li class="ui-sortable-handle">Item 18</li>
+          <li class="ui-sortable-handle">Item 19</li>
+          <li class="ui-sortable-handle">Item 20</li>
+          <li class="ui-sortable-handle">Item 21</li>
+        </ul>
+	</div>
+       
+    
+<script>$(".draggable-left, .draggable-abct").sortable({
+  connectWith: ".connected-sortable",
+  stack: ".connected-sortable ul"
+}).disableSelection();</script>
+</body>
+</html>
