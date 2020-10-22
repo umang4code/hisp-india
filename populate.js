@@ -9,9 +9,9 @@ xmlhttp.onreadystatechange = function() {
 };
 xmlhttp.open("GET", "https://ln1.hispindia.org/uphmis230/api/organisationUnits.json?level=4&paging=0", true);
 xmlhttp.send();
-const ou=document.getElementById("orgUnits");
+var ou=document.getElementById("orgUnits");
 for(x in myArr){
-    let newItem=document.createElement('li');   //create a list element
+    var newItem=document.createElement('li');   //create a list element
     newItem.id=myArr[x].id;		//add an id
     newItem.className="ui-sortable-handle";                      
     newItem.textContent=myArr[x].displayName;                      
