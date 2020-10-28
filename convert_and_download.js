@@ -1,4 +1,4 @@
-var weekday={"Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+var weekday=new Array("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
 var finalArr;
 function convert(){
 	finalArr= new Array[noDistricts+1];
@@ -9,7 +9,7 @@ function convert(){
 		var mylist=wl.getElementsbytag('li');
 		for(item in mylist)
 		{
-			finalArr.push({mylist[item].textContent,mylist[item].id},weekday[i]);
+			finalArr.push(new Array(mylist[item].textContent,mylist[item].id,weekday[i]));
 		}
 	}
 }
