@@ -1,10 +1,12 @@
 var xmlhttp = new XMLHttpRequest();
 var myobj;
 var myArr;
+var noDistricts;
 xmlhttp.onreadystatechange = function() {
   if (this.readyState == 4 && this.status == 200) {
     myobj = JSON.parse(this.responseText);
     myArr=myobj.organisationUnits;
+    noDistricts=myArr.length;
   }
 	var ou=document.getElementById("orgUnits");
 	for(x in myArr){
