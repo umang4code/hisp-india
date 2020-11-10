@@ -8,6 +8,58 @@
     <link rel="stylesheet" type="text/css" href="custom.css">
     <script src=populate.js></script>
 	<script src=convert_and_download.js></script>
+	<script type="text/javascript">
+        $(document).ready(function () {
+            $('#orgUnits li').draggable({
+					helper: "clone",
+				start: function(e, ui)
+				{
+					$(ui.helper).addClass("ui-draggable-helper");
+				}
+				
+                
+            });
+
+            $('#day1').droppable({
+                drop: function (event, ui) {
+                    $('#Monday').append(ui.draggable);
+                }
+            });
+
+            $('#day2').droppable({
+     
+                drop: function (event, ui) {
+                    $('#Tuesday').append(ui.draggable);
+                }
+            });
+			$('#day3').droppable({
+     
+                drop: function (event, ui) {
+                    $('#Wednesday').append(ui.draggable);
+                }
+            });
+			$('#day4').droppable({
+     
+                drop: function (event, ui) {
+                    $('#Thursday').append(ui.draggable);
+                }
+            });
+			$('#day5').droppable({
+     
+                drop: function (event, ui) {
+                    $('#Friday').append(ui.draggable);
+                }
+            });
+			$('#day6').droppable({
+     
+                drop: function (event, ui) {
+                    $('#Saturday').append(ui.draggable);
+                }
+            });
+			
+			
+        });
+    </script>
 
 </head>
 <body>
@@ -24,7 +76,7 @@
 	</div>
 	</div>
 	
-	<div class="other">
+	<div class="other" id="day1">
 	
 	<h2>Monday</h2>
 	<div class="small">
@@ -33,7 +85,7 @@
 	</ul>
 	</div>
 	</div>
-	<div class="other">
+	<div class="other" id="day2">
 	
 	<h2>Tuesday</h2>
 	<div class="small">
@@ -43,7 +95,7 @@
 	</div>
 	</div>	
 
-	<div class="other">
+	<div class="other" id="day3">
 	
 	<h2>Wednesday</h2>
 	<div class="small">	
@@ -53,7 +105,7 @@
         </ul>
 	</div>
 	</div>
-	<div class="other">
+	<div class="other" id="day4">
 	
 	<h2>Thursday</h2>
 	<div class="small">
@@ -63,7 +115,7 @@
 	</div>
 	</div>	
 
-	<div class="other">
+	<div class="other" id="day5">
 	<h2>Friday</h2>
 	<div class="small">	
 	<ul class="connected-sortable draggable-abct" id="Friday">
@@ -71,7 +123,7 @@
         </ul>
 	</div>
 	</div>
-	<div class="other">
+	<div class="other" id="day6">
 	
 	<h2>Saturday</h2>
 	<div class="small">	
@@ -82,9 +134,6 @@
 	</div>
        
     <button onclick=convert() class="button" > <span> Generate Csv </span> </button>
-<script>$(".draggable-left, .draggable-abct").sortable({
-  connectWith: ".connected-sortable",
-  stack: ".connected-sortable ul", placeholder: "sortable-placeholder"
-}).disableSelection();</script>
+
 </body>
 </html>
