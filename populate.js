@@ -16,6 +16,56 @@ xmlhttp.onreadystatechange = function() {
     newItem.textContent=myArr[x].displayName;                      
    	ou.appendChild(newItem);                 //append to the doc.body
 	}
+  $(document).ready(function () {
+            $('#orgUnits li').draggable({
+          helper: "clone",
+        start: function(e, ui)
+        {
+          $(ui.helper).addClass("ui-draggable-helper");
+        }
+        
+                
+            });
+
+            $('#day1').droppable({
+                drop: function (event, ui) {
+                    $('#Monday').append(ui.draggable);
+                }
+            });
+
+            $('#day2').droppable({
+     
+                drop: function (event, ui) {
+                    $('#Tuesday').append(ui.draggable);
+                }
+            });
+      $('#day3').droppable({
+     
+                drop: function (event, ui) {
+                    $('#Wednesday').append(ui.draggable);
+                }
+            });
+      $('#day4').droppable({
+     
+                drop: function (event, ui) {
+                    $('#Thursday').append(ui.draggable);
+                }
+            });
+      $('#day5').droppable({
+     
+                drop: function (event, ui) {
+                    $('#Friday').append(ui.draggable);
+                }
+            });
+      $('#day6').droppable({
+     
+                drop: function (event, ui) {
+                    $('#Saturday').append(ui.draggable);
+                }
+            });
+      
+      
+        });
 };
 xmlhttp.open("GET", "https://ln1.hispindia.org/uphmis230/api/organisationUnits.json?level=4&paging=0", true);
 xmlhttp.send();
